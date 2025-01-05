@@ -7,37 +7,53 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="game-container">
-        <!-- Cabeçalho com Dillo e ArmaCoin -->
-        <div id="header">
-            <div id="dillo">
-                <button class="currency-btn">DILLO</button>
-            </div>
-            <div id="arma-coin">
-                <button class="currency-btn">ARMA COIN</button>
-            </div>
-        </div>
 
-        <!-- Área do Jogo com itens caindo -->
-        <div id="1.png">
-            <div id="items">
-                <img src="coin.png" alt="Coin" class="item" id="coin">
-                <img src="duck.png" alt="Duck" class="item" id="duck">
-                <img src="alien 01.png" alt="Alien" class="item" id="alien">
+    <!-- Imagem de fundo do site -->
+    <div id="background" class="background">
+        <!-- Conteúdo principal do jogo -->
+        <div id="game-container">
+            
+            <!-- Cabeçalho com as moedas Dillo e ArmaCoin -->
+            <div id="header" class="header">
+                <div id="dillo" class="currency">
+                    <button class="currency-btn">
+                        <img src="imagens/dillo-icon.png" alt="Dillo Icon" class="currency-icon"> DILLO: <span id="dillo-balance">0</span>
+                    </button>
+                </div>
+                <div id="arma-coin" class="currency">
+                    <button class="currency-btn">
+                        <img src="imagens/arma-coin-icon.png" alt="ArmaCoin Icon" class="currency-icon"> ARMA COIN: <span id="arma-coin-balance">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Área do Jogo (Itens que vão cair) -->
+            <div id="game-area" class="game-area">
+                <div id="items" class="items">
+                    <!-- Imagens dos itens que vão cair (moeda, pato, alien) -->
+                    <img src="imagens/coin.png" alt="Coin" class="item" id="coin">
+                    <img src="imagens/duck.png" alt="Duck" class="item" id="duck">
+                    <img src="imagens/alien.png" alt="Alien" class="item" id="alien">
+                </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div id="action-buttons" class="action-buttons">
+                <button id="connect-wallet" class="action-btn">CONNECT WALLET</button>
+                <button id="convert-dillo" class="action-btn">CONVERT DILLO</button>
+                <button id="get-more-chances" class="action-btn">GET MORE CHANCES</button>
+                <button id="promote-coin" class="action-btn">PROMOTE YOUR COIN</button>
                 
+                <!-- Botão Play -->
+                <button id="play-btn" class="action-btn">
+                    <img src="imagens/play-btn.png" alt="Play Button" class="play-btn-icon"> PLAY
+                </button>
             </div>
-        </div>
-
-        <!-- Botões de ação -->
-        <div id="action-buttons">
-            <button id="connect-wallet" class="action-btn">CONNECT WALLET</button>
-            <button id="convert-dillo" class="action-btn">CONVERT DILLO</button>
-            <button id="get-more-chances" class="action-btn">GET MORE CHANCES</button>
-            <button id="promote-coin" class="action-btn">PROMOTE YOUR COIN</button>
         </div>
     </div>
 
     <!-- Adicionando o arquivo JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.33.0/lib/index.iife.js"></script>
     <script src="js/game.js"></script>
 </body>
 </html>
