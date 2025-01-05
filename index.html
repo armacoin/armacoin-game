@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArmaCoin Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Cabeçalho com Dillo e ArmaCoin -->
+        <div id="header">
+            <div id="dillo">
+                <button class="currency-btn">DILLO</button>
+            </div>
+            <div id="arma-coin">
+                <button class="currency-btn">ARMA COIN</button>
+            </div>
+        </div>
+
+        <!-- Área do Jogo com itens caindo -->
+        <div id="game-area">
+            <div id="items">
+                <img src="imagens/coin.png" alt="Coin" class="item" id="coin">
+                <img src="imagens/duck.png" alt="Duck" class="item" id="duck">
+                <img src="imagens/alien.png" alt="Alien" class="item" id="alien">
+            </div>
+        </div>
+
+        <!-- Botões de ação -->
+        <div id="action-buttons">
+            <button id="connect-wallet" class="action-btn">CONNECT WALLET</button>
+            <button id="convert-dillo" class="action-btn">CONVERT DILLO</button>
+            <button id="get-more-chances" class="action-btn">GET MORE CHANCES</button>
+            <button id="promote-coin" class="action-btn">PROMOTE YOUR COIN</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
