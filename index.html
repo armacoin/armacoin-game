@@ -4,56 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArmaCoin Game</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Imagem de fundo do site -->
-    <div id="background" class="background">
-        <!-- Conteúdo principal do jogo -->
-        <div id="game-container">
-            
-            <!-- Cabeçalho com as moedas Dillo e ArmaCoin -->
-            <div id="header" class="header">
-                <div id="dillo" class="currency">
-                    <button class="currency-btn">
-                        <img src="imagens/dillo-icon.png" alt="Dillo Icon" class="currency-icon"> DILLO: <span id="dillo-balance">0</span>
-                    </button>
-                </div>
-                <div id="arma-coin" class="currency">
-                    <button class="currency-btn">
-                        <img src="imagens/arma-coin-icon.png" alt="ArmaCoin Icon" class="currency-icon"> ARMA COIN: <span id="arma-coin-balance">0</span>
-                    </button>
-                </div>
+    <!-- Fundo do Jogo -->
+    <div class="game-container">
+        <!-- Logo do Jogo (opcional) -->
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo do Jogo">
+        </div>
+
+        <!-- Área Principal do Jogo -->
+        <div class="game-area">
+            <!-- Aqui ficam os itens caindo e o campo de moedas -->
+            <div class="falling-items">
+                <!-- Você pode adicionar aqui as animações de itens caindo -->
             </div>
 
-            <!-- Área do Jogo (Itens que vão cair) -->
-            <div id="game-area" class="game-area">
-                <div id="items" class="items">
-                    <!-- Imagens dos itens que vão cair (moeda, pato, alien) -->
-                    <img src="imagens/coin.png" alt="Coin" class="item" id="coin">
-                    <img src="imagens/duck.png" alt="Duck" class="item" id="duck">
-                    <img src="imagens/alien.png" alt="Alien" class="item" id="alien">
-                </div>
+            <div class="coin-space">
+                <p>Coletadas: <span id="coins-collected">0</span> Dillos</p>
             </div>
+        </div>
 
-            <!-- Botões de Ação -->
-            <div id="action-buttons" class="action-buttons">
-                <button id="CONECT_WALLET.png" class="action-btn">CONNECT WALLET</button>
-                <button id="CONVERT_DILLO.png" class="action-btn">CONVERT DILLO</button>
-                <button id="GET_MORE_CHANCES.png" class="action-btn">GET MORE CHANCES</button>
-                <button id="PROMOTE_YOU_COIN.png" class="action-btn">PROMOTE YOUR COIN</button>
-                
-                <!-- Botão Play -->
-                <button id="play-btn" class="action-btn">
-                    <img src="PLAY.png" alt="Play Button" class="play-btn-icon"> PLAY
-                </button>
-            </div>
+        <!-- Botões de Ação -->
+        <div id="buttons">
+            <button id="connect-wallet-btn"></button>
+            <button id="convert-dillo-btn"></button>
+            <button id="get-more-chances-btn"></button>
+            <button id="promote-your-coin-btn"></button>
+            <button id="play-btn"></button>
         </div>
     </div>
 
-    <!-- Adicionando o arquivo JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.33.0/lib/index.iife.js"></script>
-    <script src="js/game.js"></script>
 </body>
 </html>
