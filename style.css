@@ -85,7 +85,7 @@ button {
 
 /* Botão Play */
 #play-btn {
-    background-image: url('imagens/play-btn.png'); /* Substitua com o caminho correto */
+    background-image: url('PLAY.png'); /* Substitua com o caminho correto */
 }
 
 /* Efeito de hover nos botões */
